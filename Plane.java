@@ -13,7 +13,9 @@ public class Plane {
 
     public Plane() {
         numberOfWings = 2;
+
     }
+
 
     public Plane(String name, int fuelTanksVolume, int numberOfPassengers, int averageSpeed) {
         this.name = name;
@@ -23,10 +25,7 @@ public class Plane {
     }
 
     public Plane(String name, int fuelTanksVolume, int numberOfPassengers, int averageSpeed, double weight, String engine, int illuminators) {
-        this.name = name;
-        this.fuelTanksVolume = fuelTanksVolume;
-        this.numberOfPassengers = numberOfPassengers;
-        this.averageSpeed = averageSpeed;
+        this(name, fuelTanksVolume, numberOfPassengers, averageSpeed);
         this.weight = weight;
         this.engine = engine;
         this.illuminators = illuminators;
