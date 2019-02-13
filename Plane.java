@@ -42,12 +42,12 @@ public class Plane {
                 ", illuminators=" + illuminators;
     }
 
-    public static int printStaticNumberOfWings(){
-        return numberOfWings;
+    public static void printStaticNumberOfWings(){
+        System.out.println(numberOfWings);
     }
 
-    public int printNumberOfWings() {
-        return numberOfWings;
+    public void printNumberOfWings() {
+        System.out.println(numberOfWings);
     }
     public void resetValues(String name, int fuelTanksVolume, int numberOfPassengers, int averageSpeed, double weight, String engine, int illuminators) {
         this.name = name;
@@ -60,26 +60,32 @@ public class Plane {
     }
 
     public void setName(String name) {
+
         this.name = name;
     }
 
     public void setFuelTanksVolume(int fuelTanksVolume) {
+
         this.fuelTanksVolume = fuelTanksVolume;
     }
 
     public void setNumberOfPassengers(int numberOfPassengers) {
+
         this.numberOfPassengers = numberOfPassengers;
     }
 
     public void setAverageSpeed(int averageSpeed) {
+
         this.averageSpeed = averageSpeed;
     }
 
     public void setWeight(double weight) {
+
         this.weight = weight;
     }
 
     public String getName() {
+
         return name;
     }
 
