@@ -1,4 +1,4 @@
-package com.company;
+package ua.lviv.iot.lab_1;
 
 public class Plane {
 
