@@ -4,20 +4,24 @@ public class MasterClass extends HolidayForChildren {
 
     private MasterClassType type;
 
-    public MasterClass(MasterClassType type) {
+    public MasterClass(final MasterClassType type) {
         this.type = type;
     }
 
-    public MasterClass(double price, double duration, int childrenNumber, int ageCategory, MasterClassType type) {
+    public MasterClass(final double price,
+                       final double duration,
+                       final int childrenNumber,
+                       final int ageCategory,
+                       final MasterClassType type) {
         super(price, duration, childrenNumber, ageCategory);
         this.type = type;
     }
 
-    public MasterClassType getType() {
+    public final MasterClassType getType() {
         return type;
     }
 
-    public void setType(MasterClassType type) {
+    public final void setType(final MasterClassType type) {
         this.type = type;
     }
 }

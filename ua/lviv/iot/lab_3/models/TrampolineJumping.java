@@ -4,20 +4,24 @@ public class TrampolineJumping extends HolidayForChildren {
 
     private double trampolineSize;
 
-    public TrampolineJumping(double trampolineSize) {
+    public TrampolineJumping(final double trampolineSize) {
         this.trampolineSize = trampolineSize;
     }
 
-    public TrampolineJumping(double price, double duration, int childrenNumber, int ageCategory, double trampolineSize) {
+    public TrampolineJumping(final double price,
+                             final double duration,
+                             final int childrenNumber,
+                             final int ageCategory,
+                             final double trampolineSize) {
         super(price, duration, childrenNumber, ageCategory);
         this.trampolineSize = trampolineSize;
     }
 
-    public double getTrampolineSize() {
+    public final double getTrampolineSize() {
         return trampolineSize;
     }
 
-    public void setTrampolineSize(double trampolineSize) {
+    public final void setTrampolineSize(final double trampolineSize) {
         this.trampolineSize = trampolineSize;
     }
 }

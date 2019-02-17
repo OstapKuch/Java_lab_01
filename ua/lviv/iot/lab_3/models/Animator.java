@@ -5,26 +5,31 @@ public class Animator extends HolidayForChildren {
     private AnimatorType type;
     private int animatorsQuantity;
 
+    public Animator() {
 
-    public Animator(double price, double duration, int childrenNumber, int ageCategory, AnimatorType type, int animatorsQuantity) {
+    }
+
+
+    public Animator(final double price,
+                    final double duration,
+                    final int childrenNumber,
+                    final int ageCategory,
+                    final AnimatorType type,
+                    final int animatorsQuantity) {
         super(price, duration, childrenNumber, ageCategory);
         this.type = type;
         this.animatorsQuantity = animatorsQuantity;
     }
 
-    public AnimatorType getType() {
+    public final AnimatorType getType() {
         return type;
     }
 
-    public void setType(AnimatorType type) {
-        this.type = type;
-    }
-
-    public int getAnimatorsQuantity() {
+    public final int getAnimatorsQuantity() {
         return animatorsQuantity;
     }
 
-    public void setAnimatorsQuantity(int animatorsQuantity) {
+    public final void setAnimatorsQuantity(final int animatorsQuantity) {
         this.animatorsQuantity = animatorsQuantity;
     }
 }
