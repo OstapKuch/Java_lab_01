@@ -1,12 +1,8 @@
-package ua.lviv.iot.lab_3.models;
+package ua.lviv.iot.lab_3;
 
 public class MasterClass extends HolidayForChildren {
 
     private MasterClassType type;
-
-    public MasterClass(final MasterClassType type) {
-        this.type = type;
-    }
 
     public MasterClass(final double price,
                        final double duration,
@@ -21,7 +17,4 @@ public class MasterClass extends HolidayForChildren {
         return type;
     }
 
-    public final void setType(final MasterClassType type) {
-        this.type = type;
-    }
 }
