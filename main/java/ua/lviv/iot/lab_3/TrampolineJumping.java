@@ -1,11 +1,11 @@
-package ua.lviv.iot.lab_3.models;
+package ua.lviv.iot.lab_3;
 
 public class TrampolineJumping extends HolidayForChildren {
 
     private double trampolineSize;
 
-    public TrampolineJumping(final double trampolineSize) {
-        this.trampolineSize = trampolineSize;
+    public TrampolineJumping() {
+
     }
 
     public TrampolineJumping(final double price,

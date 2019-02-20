@@ -1,21 +1,21 @@
 package ua.lviv.iot.lab_3.managers;
 
-import ua.lviv.iot.lab_3.models.HolidayForChildren;
-import ua.lviv.iot.lab_3.models.Animator;
-import ua.lviv.iot.lab_3.models.Quest;
-import ua.lviv.iot.lab_3.models.MasterClass;
-import ua.lviv.iot.lab_3.models.TrampolineJumping;
-import ua.lviv.iot.lab_3.models.MasterClassType;
-import ua.lviv.iot.lab_3.models.QuestDifficulty;
-import ua.lviv.iot.lab_3.models.QuestLocation;
-import ua.lviv.iot.lab_3.models.AnimatorType;
+import ua.lviv.iot.lab_3.HolidayForChildren;
+import ua.lviv.iot.lab_3.Animator;
+import ua.lviv.iot.lab_3.Quest;
+import ua.lviv.iot.lab_3.MasterClass;
+import ua.lviv.iot.lab_3.TrampolineJumping;
+import ua.lviv.iot.lab_3.MasterClassType;
+import ua.lviv.iot.lab_3.QuestDifficulty;
+import ua.lviv.iot.lab_3.QuestLocation;
+import ua.lviv.iot.lab_3.AnimatorType;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class HolidayManager implements HolidayManagerInterface {
 
-    private List<HolidayForChildren> listHolidays =
+    public List<HolidayForChildren> listHolidays =
             new ArrayList<HolidayForChildren>();
 
     @Override
@@ -37,8 +37,7 @@ public class HolidayManager implements HolidayManagerInterface {
         }
         listHolidays.sort((HolidayForChildren o1, HolidayForChildren o2)
                 -> (int) (reverser * (o1.getPrice() - o2.getPrice())));
-        listHolidays.forEach((holiday) ->
-                System.out.println(holiday.getPrice()));
+
 
     }
 
@@ -53,8 +52,7 @@ public class HolidayManager implements HolidayManagerInterface {
         }
         listHolidays.sort((HolidayForChildren o1, HolidayForChildren o2)
                 -> (int) (reverser * (o1.getDuration() - o2.getDuration())));
-        listHolidays.forEach((holiday)
-                -> System.out.println(holiday.getDuration()));
+
 
     }
 
@@ -62,13 +60,17 @@ public class HolidayManager implements HolidayManagerInterface {
     @Override
     public final void setHolidays() {
 
-        listHolidays.add(new Animator(300.0, 2.30, 5, 8,
-                AnimatorType.PHAMTOMIMIST, 2));
-        listHolidays.add(new Quest(800.0, 4.0, 8, 14, QuestLocation.CITY_CENTRE,
-                QuestDifficulty.NORMAL));
-        listHolidays.add(new MasterClass(400.0, 1.30, 5, 16,
+        listHolidays.add(new MasterClass(400.0, 1.30,
+                5, 16,
                 MasterClassType.CLAY_MOLDING));
-        listHolidays.add(new TrampolineJumping(650.0, 4.30, 9, 10, 4.5));
+        listHolidays.add(new Animator(300.0, 2.30, 5,
+                8,
+                AnimatorType.PHAMTOMIMIST, 2));
+        listHolidays.add(new Quest(800.0, 4.0, 8,
+                14, QuestLocation.CITY_CENTRE,
+                QuestDifficulty.NORMAL));
+
+
 
     }
 }
