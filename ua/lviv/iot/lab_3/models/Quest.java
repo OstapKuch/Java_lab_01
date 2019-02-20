@@ -9,30 +9,36 @@ public class Quest extends HolidayForChildren {
 
     }
 
-    public Quest(QuestLocation location, QuestDifficulty difficulty) {
+    public Quest(final QuestLocation location,
+                 final QuestDifficulty difficulty) {
         this.location = location;
         this.difficulty = difficulty;
     }
 
-    public Quest(double price, double duration, int childrenNumber, int ageCategory, QuestLocation location, QuestDifficulty difficulty) {
+    public Quest(final double price,
+                 final double duration,
+                 final int childrenNumber,
+                 final int ageCategory,
+                 final QuestLocation location,
+                 final QuestDifficulty difficulty) {
         super(price, duration, childrenNumber, ageCategory);
         this.location = location;
         this.difficulty = difficulty;
     }
 
-    public QuestLocation getLocation() {
+    public final QuestLocation getLocation() {
         return location;
     }
 
-    public void setLocation(QuestLocation location) {
+    public final void setLocation(final QuestLocation location) {
         this.location = location;
     }
 
-    public QuestDifficulty getDifficulty() {
+    public final QuestDifficulty getDifficulty() {
         return difficulty;
     }
 
-    public void setDifficulty(QuestDifficulty difficulty) {
+    public final void setDifficulty(final QuestDifficulty difficulty) {
         this.difficulty = difficulty;
     }
 }

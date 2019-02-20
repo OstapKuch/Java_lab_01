@@ -11,42 +11,43 @@ public abstract class HolidayForChildren {
 
     }
 
-    public HolidayForChildren(double price, double duration, int childrenNumber, int ageCategory) {
+    public HolidayForChildren(final double price, final double duration,
+                              final int childrenNumber, final int ageCategory) {
         this.price = price;
         this.duration = duration;
         this.childrenNumber = childrenNumber;
         this.ageCategory = ageCategory;
     }
 
-    public double getPrice() {
+    public final double getPrice() {
         return price;
     }
 
-    public void setPrice(double price) {
+    public final void setPrice(final double price) {
         this.price = price;
     }
 
-    public double getDuration() {
+    public final double getDuration() {
         return duration;
     }
 
-    public void setDuration(double duration) {
+    public final void setDuration(final double duration) {
         this.duration = duration;
     }
 
-    public int getChildrenNumber() {
+    public final int getChildrenNumber() {
         return childrenNumber;
     }
 
-    public void setChildrenNumber(int childrenNumber) {
+    public final void setChildrenNumber(final int childrenNumber) {
         this.childrenNumber = childrenNumber;
     }
 
-    public int getAgeCategory() {
+    public final int getAgeCategory() {
         return ageCategory;
     }
 
-    public void setAgeCategory(int ageCategory) {
+    public final void setAgeCategory(final int ageCategory) {
         this.ageCategory = ageCategory;
     }
 }
