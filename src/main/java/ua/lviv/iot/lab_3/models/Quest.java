@@ -9,12 +9,6 @@ public class Quest extends HolidayForChildren {
 
     }
 
-    public Quest(final QuestLocation location,
-                 final QuestDifficulty difficulty) {
-        this.location = location;
-        this.difficulty = difficulty;
-    }
-
     public Quest(final double price,
                  final double duration,
                  final int childrenNumber,
@@ -26,19 +20,22 @@ public class Quest extends HolidayForChildren {
         this.difficulty = difficulty;
     }
 
-    public final QuestLocation getLocation() {
-        return location;
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ", QuestLocation, QuestDifficulty";
     }
 
-    public final void setLocation(final QuestLocation location) {
-        this.location = location;
+    @Override
+    public String toCSV() {
+        return super.toCSV() + ", " + getLocation() + ", " + getDifficulty();
+    }
+
+    public final QuestLocation getLocation() {
+        return location;
     }
 
     public final QuestDifficulty getDifficulty() {
         return difficulty;
     }
 
-    public final void setDifficulty(final QuestDifficulty difficulty) {
-        this.difficulty = difficulty;
-    }
 }

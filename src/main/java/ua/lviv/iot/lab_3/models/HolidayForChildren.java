@@ -19,6 +19,18 @@ public abstract class HolidayForChildren {
         this.ageCategory = ageCategory;
     }
 
+    public String getHeaders() {
+
+        return "price, duration, childrenNumber, ageCategory";
+
+    }
+
+    public String toCSV() {
+        return getPrice() + ", " +  getDuration() + ", " + getChildrenNumber()
+                + ", " + getAgeCategory();
+
+    }
+
     public final double getPrice() {
         return price;
     }

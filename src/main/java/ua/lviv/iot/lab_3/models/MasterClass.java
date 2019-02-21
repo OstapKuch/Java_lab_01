@@ -4,8 +4,8 @@ public class MasterClass extends HolidayForChildren {
 
     private MasterClassType type;
 
-    public MasterClass(final MasterClassType type) {
-        this.type = type;
+    MasterClass() {
+
     }
 
     public MasterClass(final double price,
@@ -17,11 +17,18 @@ public class MasterClass extends HolidayForChildren {
         this.type = type;
     }
 
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ", MasterClassType";
+    }
+
+    @Override
+    public String toCSV() {
+        return super.toCSV() + ", " + getType();
+    }
+
     public final MasterClassType getType() {
         return type;
     }
 
-    public final void setType(final MasterClassType type) {
-        this.type = type;
-    }
 }

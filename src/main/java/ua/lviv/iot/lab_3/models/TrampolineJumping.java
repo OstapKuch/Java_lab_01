@@ -4,8 +4,8 @@ public class TrampolineJumping extends HolidayForChildren {
 
     private double trampolineSize;
 
-    public TrampolineJumping(final double trampolineSize) {
-        this.trampolineSize = trampolineSize;
+    public TrampolineJumping() {
+
     }
 
     public TrampolineJumping(final double price,
@@ -15,6 +15,16 @@ public class TrampolineJumping extends HolidayForChildren {
                              final double trampolineSize) {
         super(price, duration, childrenNumber, ageCategory);
         this.trampolineSize = trampolineSize;
+    }
+
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ", trampolineSize";
+    }
+
+    @Override
+    public String toCSV() {
+        return super.toCSV() + ", " + getTrampolineSize();
     }
 
     public final double getTrampolineSize() {

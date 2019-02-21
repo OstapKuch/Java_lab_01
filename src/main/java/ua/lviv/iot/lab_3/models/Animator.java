@@ -21,6 +21,16 @@ public class Animator extends HolidayForChildren {
         this.animatorsQuantity = animatorsQuantity;
     }
 
+    @Override
+    public String getHeaders() {
+        return super.getHeaders() + ", AnimatorType, animatorsQuantity";
+    }
+
+    @Override
+    public String toCSV() {
+        return super.toCSV() + ", " + getType() + ", " + getAnimatorsQuantity();
+    }
+
     public final AnimatorType getType() {
         return type;
     }
