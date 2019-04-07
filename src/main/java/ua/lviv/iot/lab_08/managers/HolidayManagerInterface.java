@@ -1,4 +1,4 @@
-package ua.lviv.iot.lab_3.managers;
+package ua.lviv.iot.lab_08.managers;
 
 public interface HolidayManagerInterface {
 

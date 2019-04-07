@@ -1,4 +1,4 @@
-package ua.lviv.iot.lab_3.models;
+package ua.lviv.iot.lab_08.models;
 
 public enum QuestLocation {
 

@@ -1,5 +1,9 @@
-package ua.lviv.iot.lab_3.models;
+package ua.lviv.iot.lab_08.models;
 
+
+import javax.persistence.Entity;
+
+@Entity
 public class Animator extends HolidayForChildren {
 
     private AnimatorType type;
@@ -21,15 +25,15 @@ public class Animator extends HolidayForChildren {
         this.animatorsQuantity = animatorsQuantity;
     }
 
-    public final AnimatorType getType() {
+    public AnimatorType getType() {
         return type;
     }
 
-    public final int getAnimatorsQuantity() {
+    public int getAnimatorsQuantity() {
         return animatorsQuantity;
     }
 
-    public final void setAnimatorsQuantity(final int animatorsQuantity) {
+    public void setAnimatorsQuantity(final int animatorsQuantity) {
         this.animatorsQuantity = animatorsQuantity;
     }
 }

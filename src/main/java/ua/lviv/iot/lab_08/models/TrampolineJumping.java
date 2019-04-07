@@ -1,11 +1,14 @@
-package ua.lviv.iot.lab_3.models;
+package ua.lviv.iot.lab_08.models;
 
+import javax.persistence.Entity;
+
+@Entity
 public class TrampolineJumping extends HolidayForChildren {
 
     private double trampolineSize;
 
-    public TrampolineJumping(final double trampolineSize) {
-        this.trampolineSize = trampolineSize;
+    public TrampolineJumping() {
+
     }
 
     public TrampolineJumping(final double price,
@@ -17,11 +20,11 @@ public class TrampolineJumping extends HolidayForChildren {
         this.trampolineSize = trampolineSize;
     }
 
-    public final double getTrampolineSize() {
+    public double getTrampolineSize() {
         return trampolineSize;
     }
 
-    public final void setTrampolineSize(final double trampolineSize) {
+    public void setTrampolineSize(final double trampolineSize) {
         this.trampolineSize = trampolineSize;
     }
 }

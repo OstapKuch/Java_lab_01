@@ -1,6 +1,17 @@
-package ua.lviv.iot.lab_3.models;
+package ua.lviv.iot.lab_08.models;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Inheritance;
+
+@Entity
+@Inheritance
 public abstract class HolidayForChildren {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long   id;
 
     private double price;
     private double duration;
@@ -19,35 +30,43 @@ public abstract class HolidayForChildren {
         this.ageCategory = ageCategory;
     }
 
-    public final double getPrice() {
+    public Long   getId() {
+        return id;
+    }
+
+    public void setId(final Long   id) {
+        this.id = id;
+    }
+
+    public double getPrice() {
         return price;
     }
 
-    public final void setPrice(final double price) {
+    public void setPrice(final double price) {
         this.price = price;
     }
 
-    public final double getDuration() {
+    public double getDuration() {
         return duration;
     }
 
-    public final void setDuration(final double duration) {
+    public void setDuration(final double duration) {
         this.duration = duration;
     }
 
-    public final int getChildrenNumber() {
+    public int getChildrenNumber() {
         return childrenNumber;
     }
 
-    public final void setChildrenNumber(final int childrenNumber) {
+    public void setChildrenNumber(final int childrenNumber) {
         this.childrenNumber = childrenNumber;
     }
 
-    public final int getAgeCategory() {
+    public int getAgeCategory() {
         return ageCategory;
     }
 
-    public final void setAgeCategory(final int ageCategory) {
+    public void setAgeCategory(final int ageCategory) {
         this.ageCategory = ageCategory;
     }
 }

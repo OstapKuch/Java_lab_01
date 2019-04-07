@@ -1,4 +1,4 @@
-package ua.lviv.iot.lab_3.models;
+package ua.lviv.iot.lab_08.models;
 
 public class Quest extends HolidayForChildren {
 
@@ -7,12 +7,6 @@ public class Quest extends HolidayForChildren {
 
     public Quest() {
 
-    }
-
-    public Quest(final QuestLocation location,
-                 final QuestDifficulty difficulty) {
-        this.location = location;
-        this.difficulty = difficulty;
     }
 
     public Quest(final double price,
@@ -30,15 +24,8 @@ public class Quest extends HolidayForChildren {
         return location;
     }
 
-    public final void setLocation(final QuestLocation location) {
-        this.location = location;
-    }
-
     public final QuestDifficulty getDifficulty() {
         return difficulty;
     }
 
-    public final void setDifficulty(final QuestDifficulty difficulty) {
-        this.difficulty = difficulty;
-    }
 }
