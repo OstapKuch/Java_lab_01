@@ -25,6 +25,17 @@ public class Animator extends HolidayForChildren {
         this.animatorsQuantity = animatorsQuantity;
     }
 
+    @Override
+    public String toString() {
+        return "Animator: " + super.toString() +
+                " type=" + type +
+                ", animatorsQuantity=" + animatorsQuantity;
+    }
+
+    public void setType(final AnimatorType type) {
+        this.type = type;
+    }
+
     public AnimatorType getType() {
         return type;
     }

@@ -14,28 +14,28 @@ import ua.lviv.iot.lab_08.repositories.TrampolineRepository;
 public class Lab08Application {
 
 	public static void main(final String[] args) {
-		SpringApplication.run(Lab08Application.class, args).close();
+		SpringApplication.run(Lab08Application.class, args);
 	}
 
-	@Bean
-	public CommandLineRunner trampolineBean(
-			final TrampolineRepository trampolineRepository) {
-		TrampolineJumping holiday = new TrampolineJumping(
-				800.0, 4.0, 8,
-				14, 6.0);
-		return (args) -> {
-			trampolineRepository.save(holiday);
-		};
-	}
-
-	@Bean
-	public CommandLineRunner animatorBean(
-			final AnimatorRepository animatorRepository) {
-		Animator holiday = new Animator(
-				1200.0, 2.5, 3,
-				6, AnimatorType.PHAMTOMIMIST, 12);
-		return (args) -> {
-			animatorRepository.save(holiday);
-		};
-	}
+//	@Bean
+//	public CommandLineRunner trampolineBean(
+//			final TrampolineRepository trampolineRepository) {
+//		TrampolineJumping holiday = new TrampolineJumping(
+//				800.0, 4.0, 8,
+//				14, 6.0);
+//		return (args) -> {
+//			trampolineRepository.save(holiday);
+//		};
+//	}
+//
+//	@Bean
+//	public CommandLineRunner animatorBean(
+//			final AnimatorRepository animatorRepository) {
+//		Animator holiday = new Animator(
+//				1200.0, 2.5, 3,
+//				6, AnimatorType.PHAMTOMIMIST, 12);
+//		return (args) -> {
+//			animatorRepository.save(holiday);
+//		};
+//	}
 }

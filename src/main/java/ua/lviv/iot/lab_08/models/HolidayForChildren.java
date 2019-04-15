@@ -6,12 +6,13 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Inheritance;
 
+
 @Entity
 @Inheritance
 public abstract class HolidayForChildren {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long   id;
+    private Integer id;
 
     private double price;
     private double duration;
@@ -30,11 +31,20 @@ public abstract class HolidayForChildren {
         this.ageCategory = ageCategory;
     }
 
-    public Long   getId() {
+    @Override
+    public String toString() {
+        return "id=" + id +
+                ", price=" + price +
+                ", duration=" + duration +
+                ", childrenNumber=" + childrenNumber +
+                ", ageCategory=" + ageCategory;
+    }
+
+    public Integer   getId() {
         return id;
     }
 
-    public void setId(final Long   id) {
+    public void setId(final Integer   id) {
         this.id = id;
     }
 
